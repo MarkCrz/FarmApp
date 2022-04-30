@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FarmApp</string>
+    <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
+    <string name="laboratorio">Laboratório</string>
+    <string name="senha">Senha</string>
+</resources>
