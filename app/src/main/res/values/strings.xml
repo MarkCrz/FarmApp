@@ -2,6 +2,9 @@
     <string name="app_name">FarmApp</string>
     <string name="settings">Settings</string>
     <string name="logout">Logout</string>
-    <string name="laboratorio">Laboratório</string>
-    <string name="senha">Senha</string>
+    <string name="entrar">Entrar</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="voltar">Voltar</string>
+    <string name="salvar">Salvar</string>
+
 </resources>
