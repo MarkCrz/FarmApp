@@ -5,15 +5,31 @@
       <map>
         <entry key="..\:/Programas/FarmApp-main/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14" />
         <entry key="..\:/Programas/FarmApp-main/app/src/main/res/drawable/button.xml" value="0.196" />
+        <entry key="..\:/Programas/FarmApp-main/app/src/main/res/drawable/button_tela_principal.xml" value="0.295" />
         <entry key="..\:/Programas/FarmApp-main/app/src/main/res/drawable/edit_text.xml" value="0.196" />
         <entry key="..\:/Programas/FarmApp-main/app/src/main/res/drawable/ic_launcher_background.xml" value="0.14" />
         <entry key="..\:/Programas/FarmApp-main/app/src/main/res/drawable/ic_logout.xml" value="0.14" />
         <entry key="..\:/Programas/FarmApp-main/app/src/main/res/drawable/ic_settings.xml" value="0.14" />
+        <entry key="..\:/Programas/FarmApp-main/app/src/main/res/drawable/tabela_item.xml" value="0.2455" />
         <entry key="..\:/Programas/FarmApp-main/app/src/main/res/layout/activity_cadastrar.xml" value="0.18802083333333333" />
         <entry key="..\:/Programas/FarmApp-main/app/src/main/res/layout/activity_configuracoes.xml" value="0.18802083333333333" />
         <entry key="..\:/Programas/FarmApp-main/app/src/main/res/layout/activity_login.xml" value="0.218359375" />
+        <entry key="..\:/Programas/FarmApp-main/app/src/main/res/layout/activity_lotes.xml" value="0.2" />
+        <entry key="..\:/Programas/FarmApp-main/app/src/main/res/layout/activity_lotes_produtos.xml" value="0.2" />
         <entry key="..\:/Programas/FarmApp-main/app/src/main/res/layout/activity_main.xml" value="0.2911458333333333" />
+        <entry key="..\:/Programas/FarmApp-main/app/src/main/res/layout/activity_manipulacao.xml" value="0.17831813576494426" />
+        <entry key="..\:/Programas/FarmApp-main/app/src/main/res/layout/activity_produtos.xml" value="0.18" />
         <entry key="..\:/Programas/FarmApp-main/app/src/main/res/layout/activity_tela_principal.xml" value="0.18802083333333333" />
+        <entry key="..\:/Programas/FarmApp-main/app/src/main/res/layout/fragment_lotes_cadastrar.xml" value="0.18" />
+        <entry key="..\:/Programas/FarmApp-main/app/src/main/res/layout/fragment_lotes_editar.xml" value="0.358695652173913" />
+        <entry key="..\:/Programas/FarmApp-main/app/src/main/res/layout/fragment_manipulacao_conclusao.xml" value="0.28020833333333334" />
+        <entry key="..\:/Programas/FarmApp-main/app/src/main/res/layout/fragment_manipulacao_inicio.xml" value="0.2" />
+        <entry key="..\:/Programas/FarmApp-main/app/src/main/res/layout/fragment_manipulacao_segunda_pag.xml" value="0.2" />
+        <entry key="..\:/Programas/FarmApp-main/app/src/main/res/layout/fragment_manipulacao_terceira_pag.xml" value="0.18" />
+        <entry key="..\:/Programas/FarmApp-main/app/src/main/res/layout/fragment_produtos_editar.xml" value="0.17831813576494426" />
+        <entry key="..\:/Programas/FarmApp-main/app/src/main/res/layout/fragment_produtos_tabela.xml" value="0.18802083333333333" />
+        <entry key="..\:/Programas/FarmApp-main/app/src/main/res/layout/lista_custom.xml" value="0.17831813576494426" />
+        <entry key="..\:/Programas/FarmApp-main/app/src/main/res/layout/produtos_item.xml" value="0.2911458333333333" />
         <entry key="..\:/Programas/FarmApp-main/app/src/main/res/menu/main_menu.xml" value="0.18" />
         <entry key="..\:/facul/FarmApp/app/src/main/res/layout/activity_login.xml" value="0.24954710144927536" />
         <entry key="..\:/facul/FarmApp/app/src/main/res/layout/activity_main.xml" value="0.3401268115942029" />

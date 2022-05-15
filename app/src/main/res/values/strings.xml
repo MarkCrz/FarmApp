@@ -6,5 +6,10 @@
     <string name="cadastrar">Cadastrar</string>
     <string name="voltar">Voltar</string>
     <string name="salvar">Salvar</string>
+    <string name="manipulacao">Manipulação</string>
+    <string name="produtos">Produtos</string>
+    <string name="lotes">Lotes</string>
+    <string name="proximo">Próximo</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LotesCadastrarFragment">
+
+    <LinearLayout
+        style="@style/LinearLayout"
+        android:orientation="vertical"
+        android:paddingTop="80dp">
+
+        <TextView
+            android:id="@+id/txtLotesProdutosC"
+            style="@style/TextViewFragmente"
+            android:text="Lotes de {Produto}"/>
+
+        <TextView
+            android:id="@+id/txtLotesC"
+            android:layout_marginTop="30dp"
+            style="@style/TextViewFragmente"
+            android:text="Lote {Nome do lote}"/>
+
+        <EditText
+            android:id="@+id/editLCQuant"
+            style="@style/EditText"
+            android:layout_marginTop="80dp"
+            android:hint="Quantidade (g)"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/editLCDensidade"
+            style="@style/EditText"
+            android:hint="Densidade"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/editLCorrecao"
+            style="@style/EditText"
+            android:hint="Fator de correção"
+            android:inputType="numberDecimal" />
+
+
+        <LinearLayout
+            android:id="@+id/llbuttonsLotes"
+            style="@style/LinearLayoutButtons"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_marginTop="160dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnVoltarLF"
+                style="@style/LLButton"
+                android:layout_weight="1"
+                android:text="@string/voltar"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCadastrarLF"
+                style="@style/LLButton"
+                android:layout_weight="1"
+                android:text="@string/cadastrar"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

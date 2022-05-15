@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManipulacaoTerceiraPagFragment">
+
+    <LinearLayout
+        style="@style/LinearLayout"
+        android:orientation="vertical"
+        android:paddingTop="80dp">
+
+        <TextView
+            android:id="@+id/txtManipulacaoSegPag"
+            style="@style/TextViewFragmente"
+            android:text="Manipulação"/>
+
+
+        <TextView
+            android:id="@+id/txtManipulacaoTerPagCapsulasUtilizadas"
+            style="@style/TextViewMenor"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Cápsula utilizada: 00"/>
+
+        <TextView
+            android:id="@+id/txtManipulacaoTerPagQtdCapsulas"
+            style="@style/TextViewMenor"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Qtd. de Cápsulas: 60"/>
+
+        <TextView
+            android:id="@+id/txtManipulacaoTerPagItens"
+            style="@style/TextViewFragmente"
+            android:layout_marginTop="20dp"
+            android:text="Itens"/>
+
+        <TextView
+            android:id="@+id/txtManipulacaoTerPagItem1"
+            style="@style/TextViewMenor"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="normal"
+            android:layout_marginRight="20dp"
+            android:text="Melatonina: 4.5g"/>
+
+        <TextView
+            android:id="@+id/txtManipulacaoTerPagItem2"
+            style="@style/TextViewMenor"
+            android:layout_marginLeft="20dp"
+            android:textStyle="normal"
+            android:layout_marginRight="20dp"
+            android:text="Minoxidil: 6.0g"/>
+
+        <TextView
+            android:id="@+id/txtManipulacaoTerPagItem3"
+            style="@style/TextViewMenor"
+            android:textStyle="normal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Amido de milho: 1.2g"/>
+
+        <EditText
+            android:id="@+id/editMTerPagEmbalagem"
+            style="@style/EditText"
+            android:layout_marginTop="155dp"
+            android:hint="Embalagem"
+            android:inputType="numberDecimal" />
+
+        <LinearLayout
+            android:id="@+id/llbuttonsManipulacaoTerPag"
+            style="@style/LinearLayoutButtons"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_marginTop="60dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnVoltarManipulacaoTerPag"
+                style="@style/LLButton"
+                android:layout_weight="1"
+                android:text="@string/voltar"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnProximoManipulacaoTerPag"
+                style="@style/LLButton"
+                android:layout_weight="1"
+                android:text="@string/proximo"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

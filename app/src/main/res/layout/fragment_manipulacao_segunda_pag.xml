@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManipulacaoSegundaPagFragment">
+
+    <LinearLayout
+        style="@style/LinearLayout"
+        android:orientation="vertical"
+        android:paddingTop="80dp">
+
+        <TextView
+            android:id="@+id/txtManipulacaoSegPag"
+            style="@style/TextViewFragmente"
+            android:text="Manipulação"/>
+
+        <EditText
+            android:id="@+id/editMSegPagQtd"
+            style="@style/EditText"
+            android:layout_marginTop="50dp"
+            android:hint="Quantidade de cápsula"
+            android:inputType="numberDecimal" />
+
+        <ListView
+            android:id="@+id/listViewManipulacaoSegPag"
+            style="@style/TabelaFragment"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:id="@+id/txtManipulacaoSegPagVolume"
+            style="@style/TextViewMenor"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Volume por cáp. 1.67ml"/>
+
+        <EditText
+            android:id="@+id/editMSegPagExcipiente"
+            style="@style/EditText"
+            android:layout_marginTop="20dp"
+            android:hint="Excipiente"
+            android:inputType="textUri" />
+
+        <LinearLayout
+            android:id="@+id/llbuttonsManipulacaoSegPag"
+            style="@style/LinearLayoutButtons"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_marginTop="60dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnVoltarManipulacaoSegPag"
+                style="@style/LLButton"
+                android:layout_weight="1"
+                android:text="@string/voltar"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnProximoManipulacaoSegPag"
+                style="@style/LLButton"
+                android:layout_weight="1"
+                android:text="@string/proximo"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

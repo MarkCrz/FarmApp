@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ManipulacaoActivity">
+
+        <TextView
+            android:id="@+id/txtManipulacao"
+            style="@style/TextView"
+            android:text="Manipulação"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editPesquisarManipulacao"
+            style="@style/EditText"
+            android:drawableRight="@drawable/ic_search"
+            android:hint="Pesquisar"
+            android:inputType="textUri"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtManipulacao" />
+
+        <ListView
+            android:id="@+id/listViewManipulacao"
+            style="@style/Tabela"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="170dp"
+            android:layout_marginBottom="85dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editPesquisarManipulacao"
+            app:layout_constraintBottom_toTopOf="@id/llbuttonsManipulacao" />
+
+        <FrameLayout
+            android:id="@+id/manipulacaoFrameLayout"
+            style="@style/FrameLayout"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/manipulacaoSegPagFrameLayout"
+            style="@style/FrameLayout"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/llbuttonsManipulacao"
+            style="@style/LinearLayoutButtons"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_alignParentBottom="true">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnVoltarManipulacao"
+                style="@style/LLButton"
+                android:text="@string/voltar"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_weight="1"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCadastrarManipulacao"
+                style="@style/LLButton"
+                android:text="@string/cadastrar"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

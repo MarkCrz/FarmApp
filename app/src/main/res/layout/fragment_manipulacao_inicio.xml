@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManipulacaoInicioFragment">
+
+    <LinearLayout
+        style="@style/LinearLayout"
+        android:orientation="vertical"
+        android:paddingTop="80dp">
+
+        <TextView
+            android:id="@+id/txtManipulacaoInicio"
+            style="@style/TextViewFragmente"
+            android:text="Manipulação"/>
+
+
+        <EditText
+            android:id="@+id/editMINomeCliente"
+            style="@style/EditText"
+            android:layout_marginTop="80dp"
+            android:hint="Nome do cliente"
+            android:inputType="textCapWords" />
+
+        <EditText
+            android:id="@+id/editMITamCapsula"
+            style="@style/EditText"
+            android:hint="Tamanho da cápsula"
+            android:inputType="numberDecimal" />
+
+
+        <LinearLayout
+            android:id="@+id/llbuttonsManipulacaoInicio"
+            style="@style/LinearLayoutButtons"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_marginTop="315dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnVoltarManipulacaoInicio"
+                style="@style/LLButton"
+                android:layout_weight="1"
+                android:text="@string/voltar"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnProximoManipulacaoInicio"
+                style="@style/LLButton"
+                android:layout_weight="1"
+                android:text="@string/proximo"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

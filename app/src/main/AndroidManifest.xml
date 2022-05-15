@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FarmApp">
         <activity
+            android:name=".ManipulacaoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LotesProdutos"
+            android:exported="false" />
+        <activity
+            android:name=".Lotes"
+            android:exported="false" />
+        <activity
+            android:name=".Produtos"
+            android:exported="false" />
+        <activity
             android:name=".Configuracoes"
             android:exported="false" />
         <activity

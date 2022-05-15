@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Lotes">
+
+        <TextView
+            android:id="@+id/txtLotes"
+            style="@style/TextView"
+            android:text="Lotes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editPesquisarProdutosLotes"
+            style="@style/EditText"
+            android:drawableRight="@drawable/ic_search"
+            android:hint="Pesquisar"
+            android:inputType="textUri"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtLotes" />
+
+        <ListView
+            android:id="@+id/listViewProdutosLotes"
+            style="@style/Tabela"
+            android:layout_marginTop="170dp"
+            android:layout_marginBottom="85dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editPesquisarProdutosLotes"
+            app:layout_constraintBottom_toTopOf="@id/btnVoltarLotes" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnVoltarLotes"
+            style="@style/Button"
+            android:layout_marginBottom="10dp"
+            android:text="@string/voltar"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

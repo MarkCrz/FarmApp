@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProdutosEditar">
+
+    <LinearLayout
+        style="@style/LinearLayout"
+        android:orientation="vertical"
+        android:paddingTop="125dp">
+
+        <EditText
+            android:id="@+id/editPENome"
+            style="@style/EditText"
+            android:hint="Nome do produto"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editPECusto"
+            style="@style/EditText"
+            android:hint="Custo"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/editPEMargem"
+            style="@style/EditText"
+            android:hint="Margem de lucro"
+            android:inputType="numberDecimal" />
+
+        <EditText
+            android:id="@+id/editPEValorFinal"
+            style="@style/EditText"
+            android:hint="Valor final"
+            android:inputType="numberDecimal" />
+
+        <LinearLayout
+            android:id="@+id/llEbuttons"
+            style="@style/LinearLayoutButtons"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_marginTop="200dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEVoltarPF"
+                style="@style/LLButton"
+                android:layout_weight="1"
+                android:text="@string/voltar"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnESalvarPF"
+                style="@style/LLButton"
+                android:layout_weight="1"
+                android:text="@string/salvar"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

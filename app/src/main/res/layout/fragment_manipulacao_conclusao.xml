@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManipulacaoConclusaoFragment">
+
+    <LinearLayout
+        style="@style/LinearLayout"
+        android:orientation="vertical"
+        android:paddingTop="80dp">
+
+        <TextView
+            android:id="@+id/txtManipulacaoConclusao"
+            style="@style/TextViewFragmente"
+            android:text="Manipulação"/>
+
+
+        <TextView
+            android:id="@+id/txtManipulacaoConclusaoCapsulasUtilizadas"
+            style="@style/TextViewMenor"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Cápsula utilizada: 00"/>
+
+        <TextView
+            android:id="@+id/txtManipulacaoConclusaoQtdCapsulas"
+            style="@style/TextViewMenor"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Qtd. de Cápsulas: 60"/>
+
+        <TextView
+            android:id="@+id/txtManipulacaoConclusaoItens"
+            style="@style/TextViewFragmente"
+            android:layout_marginTop="20dp"
+            android:text="Itens"/>
+
+        <TextView
+            android:id="@+id/txtManipulacaoConclusaoItem1"
+            style="@style/TextViewMenor"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textStyle="normal"
+            android:layout_marginRight="20dp"
+            android:text="Melatonina: 4.5g"/>
+
+        <TextView
+            android:id="@+id/txtManipulacaoConclusaoItem2"
+            style="@style/TextViewMenor"
+            android:layout_marginLeft="20dp"
+            android:textStyle="normal"
+            android:layout_marginRight="20dp"
+            android:text="Minoxidil: 6.0g"/>
+
+        <TextView
+            android:id="@+id/txtManipulacaoConclusaoItem3"
+            style="@style/TextViewMenor"
+            android:textStyle="normal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Amido de milho: 1.2g"/>
+
+        <TextView
+            android:id="@+id/txtManipulacaoConclusaoEmbalagem"
+            style="@style/TextViewFragmente"
+            android:layout_marginTop="20dp"
+            android:text="Embalagem"/>
+
+        <TextView
+            android:id="@+id/txtManipulacaoConclusaoEmbalagem1"
+            style="@style/TextViewMenor"
+            android:textStyle="normal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Embalagem: 60ml"/>
+
+        <TextView
+            android:id="@+id/txtManipulacaoConclusaoValor"
+            style="@style/TextViewMenor"
+            android:textStyle="bold"
+            android:layout_marginTop="150dp"
+            android:textAlignment="textEnd"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="Valor: R$: 32.50"/>
+
+        <LinearLayout
+            android:id="@+id/llbuttonsManipulacaoConclusao"
+            style="@style/LinearLayoutButtons"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnVoltarManipulacaoConclusao"
+                style="@style/LLButton"
+                android:layout_weight="1"
+                android:text="@string/voltar"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSalvarManipulacaoConclusao"
+                style="@style/LLButton"
+                android:layout_weight="1"
+                android:text="@string/salvar"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
