@@ -1,6 +1,7 @@
 package com.farmapp;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.FragmentTransaction;
@@ -8,14 +9,30 @@ import androidx.fragment.app.FragmentTransaction;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 public class Produtos extends AppCompatActivity {
 
@@ -24,6 +41,13 @@ public class Produtos extends AppCompatActivity {
     private AppCompatButton button_produtosCadastrar;
     private AppCompatButton button_produtosVoltar;
     private ListView lvProdutos;
+    private EditText editPesquisarProdutos;
+
+    public String nomeProduto;
+
+    ArrayList<String> listaProdutos = new ArrayList<>();
+
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,22 +55,14 @@ public class Produtos extends AppCompatActivity {
         setContentView(R.layout.activity_produtos);
         IniciarComponentes();
 
-        ArrayList<String> listaProdutos = new ArrayList<>();
-
-        listaProdutos.add("Minoxidil");
-        listaProdutos.add("Whey");
-        listaProdutos.add("Termogênico");
-        listaProdutos.add("Melatonina");
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-                this, android.R.layout.simple_list_item_1, listaProdutos
-        );
-
-        lvProdutos.setAdapter(adapter);
-
         lvProdutos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Log.d("db_Teste", lvProdutos.getItemAtPosition(i).toString());
+
+                nomeProduto = (lvProdutos.getItemAtPosition(i).toString());
+
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.produtosEditarFrameLayout, produtosEditar).commit();
             }
@@ -86,6 +102,9 @@ public class Produtos extends AppCompatActivity {
                 trocarTela(Produtos.this, Configuracoes.class);
                 break;
             case R.id.logoutItem:
+
+                FirebaseAuth.getInstance().signOut();
+
                 trocarTela(Produtos.this, Login.class);
                 break;
         }
@@ -93,9 +112,41 @@ public class Produtos extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        BuscarTabelaDados();
+    }
+
     private void trocarTela(Activity activity, Class classe) {
         Intent intent = new Intent(activity, classe);
         startActivity(intent);
+    }
+
+    private void BuscarTabelaDados () {
+        db.collection("Produtos").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                if (!queryDocumentSnapshots.isEmpty()) {
+                    List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
+                    for (DocumentSnapshot d : list) {
+                        listaProdutos.add(d.get("nome").toString().toUpperCase(Locale.ROOT));
+                    }
+
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                            Produtos.this, android.R.layout.simple_list_item_1, listaProdutos
+                    );
+
+                    lvProdutos.setAdapter(adapter);
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.d("db_error", "Ocorreu um problema na busca de dados" + e.toString());
+            }
+        });
     }
 
 
@@ -103,5 +154,6 @@ public class Produtos extends AppCompatActivity {
         button_produtosCadastrar = findViewById(R.id.btnCadastrarProdutos);
         button_produtosVoltar = findViewById(R.id.btnVoltarProdutos);
         lvProdutos = findViewById(R.id.listViewProdutos);
+        editPesquisarProdutos = findViewById(R.id.editPesquisarProdutos);
     }
 }

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "332281090286",
+    "project_id": "farmapp-6942d",
+    "storage_bucket": "farmapp-6942d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332281090286:android:82dfa89f6045e9519d63ff",
+        "android_client_info": {
+          "package_name": "com.farmapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "332281090286-q39p4t1imegmkbja12ofmst2oodqp244.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK0YW6lQf-FfJCbMk994jVo2s64I60mRs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "332281090286-q39p4t1imegmkbja12ofmst2oodqp244.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -32,6 +32,7 @@
         <EditText
             android:id="@+id/editPCValorFinal"
             style="@style/EditText"
+            android:enabled="false"
             android:hint="Valor final"
             android:inputType="numberDecimal" />
 

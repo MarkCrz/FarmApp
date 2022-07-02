@@ -24,8 +24,8 @@
         <View
             android:id="@+id/containerComponentsCadastrar"
             style="@style/ContainerComponents"
-            android:layout_height="440dp"
-            android:layout_marginTop="100dp"
+            android:layout_height="520dp"
+            android:layout_marginTop="60dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/txtFarmAppCadastrar" />
@@ -41,6 +41,16 @@
             app:layout_constraintTop_toTopOf="@id/containerComponentsCadastrar" />
 
         <EditText
+            android:id="@+id/editUserEmail"
+            style="@style/EditText"
+            android:drawableRight="@drawable/ic_email"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastrar"
+            app:layout_constraintStart_toStartOf="@id/containerComponentsCadastrar"
+            app:layout_constraintTop_toBottomOf="@id/editUserCadastrar" />
+
+        <EditText
             android:id="@+id/editPasswordCadastrar"
             style="@style/EditText"
             android:hint="Senha"
@@ -49,7 +59,7 @@
             android:inputType="textPassword"
             app:layout_constraintStart_toStartOf="@id/containerComponentsCadastrar"
             app:layout_constraintEnd_toEndOf="@id/containerComponentsCadastrar"
-            app:layout_constraintTop_toBottomOf="@id/editUserCadastrar"
+            app:layout_constraintTop_toBottomOf="@id/editUserEmail"
             />
 
         <EditText

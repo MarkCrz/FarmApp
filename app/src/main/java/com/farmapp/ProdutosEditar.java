@@ -1,13 +1,17 @@
 package com.farmapp;
 
+import android.app.ActivityManager;
+import android.app.DirectAction;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +29,10 @@ public class ProdutosEditar extends Fragment {
 //        return fragment;
 //    }
 
+    private String nomeProduto;
+
+    private Produtos produtos = new Produtos();
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +48,9 @@ public class ProdutosEditar extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         IniciarComponentes(view);
+
+//        Log.d ("db_teste", produtos.getNomeProduto());
+
 
         button_Voltar.setOnClickListener(new View.OnClickListener() {
             @Override

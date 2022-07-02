@@ -11,6 +11,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class TelaPrincipal extends AppCompatActivity {
 
     private AppCompatButton button_produtos;
@@ -65,6 +67,9 @@ public class TelaPrincipal extends AppCompatActivity {
                 trocarTela(TelaPrincipal.this, Configuracoes.class);
                 break;
             case R.id.logoutItem:
+
+                FirebaseAuth.getInstance().signOut();
+
                 trocarTela(TelaPrincipal.this, Login.class);
                 break;
         }
@@ -72,9 +77,11 @@ public class TelaPrincipal extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
     private void trocarTela(Activity activity, Class classe) {
         Intent intent = new Intent(activity, classe);
         startActivity(intent);
+        finish();
     }
 
     private void IniciarComponentes(){

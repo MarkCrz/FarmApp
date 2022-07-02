@@ -33,7 +33,7 @@
             android:id="@+id/editUser"
             style="@style/EditText"
             android:drawableRight="@drawable/ic_user"
-            android:hint="Laboratório"
+            android:hint="Email"
             android:inputType="textUri"
             app:layout_constraintEnd_toEndOf="@id/containerComponents"
             app:layout_constraintStart_toStartOf="@id/containerComponents"
