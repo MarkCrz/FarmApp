@@ -99,7 +99,7 @@ public class ProdutosCadastrar extends Fragment {
                     snackbar.setTextColor(Color.WHITE);
                     snackbar.show();
                 } else {
-                    CadastrarProduto(nome, Double.parseDouble(custo), Double.parseDouble(margem), Double.parseDouble(valor), view);
+                    CadastrarProduto((nome.substring(0, 1).toUpperCase() + nome.substring(1).toLowerCase()), Double.parseDouble(custo), Double.parseDouble(margem), Double.parseDouble(valor), view);
                 }
             }
         });

@@ -1,30 +1,30 @@
 package com.farmapp.Dados;
 
 public class ClassListLotesProdutos {
-    String produto;
+    String loteNome;
     String gramas;
 
     public ClassListLotesProdutos() {
-        produto = "";
+        loteNome = "";
         gramas = "";
     }
 
-    public ClassListLotesProdutos(String produto, String gramas) {
-        this.produto = produto;
+    public ClassListLotesProdutos(String loteNome, String gramas) {
+        this.loteNome = loteNome;
         this.gramas = gramas;
     }
 
     public ClassListLotesProdutos(ClassListLotesProdutos classListLotesProdutos) {
-        this.produto = classListLotesProdutos.produto;
+        this.loteNome = classListLotesProdutos.loteNome;
         this.gramas = classListLotesProdutos.gramas;
     }
 
-    public String getProduto() {
-        return produto;
+    public String getLoteNome() {
+        return loteNome;
     }
 
-    public void setProduto(String produto) {
-        this.produto = produto;
+    public void setLoteNome(String loteNome) {
+        this.loteNome = loteNome;
     }
 
     public String getGramas() {
@@ -37,6 +37,6 @@ public class ClassListLotesProdutos {
 
     @Override
     public String toString() {
-        return produto + "\n" + gramas + "g";
+        return loteNome + "\n" + gramas + "g";
     }
 }

@@ -59,9 +59,12 @@ public class Produtos extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                Log.d("db_Teste", lvProdutos.getItemAtPosition(i).toString());
 
                 nomeProduto = (lvProdutos.getItemAtPosition(i).toString());
+
+                Bundle bundle = new Bundle();
+                bundle.putString("nomeProduto", nomeProduto);
+                produtosEditar.setArguments(bundle);
 
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.produtosEditarFrameLayout, produtosEditar).commit();
@@ -81,6 +84,15 @@ public class Produtos extends AppCompatActivity {
             public void onClick(View view) {
                 FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.produtosCFrameLayout, produtosFragment).commit();
+            }
+        });
+
+        editPesquisarProdutos.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean hasFocus) {
+                if (!hasFocus) {
+                    //BuscarDadosPesquisar();
+                }
             }
         });
     }
@@ -119,6 +131,7 @@ public class Produtos extends AppCompatActivity {
         BuscarTabelaDados();
     }
 
+
     private void trocarTela(Activity activity, Class classe) {
         Intent intent = new Intent(activity, classe);
         startActivity(intent);
@@ -145,6 +158,17 @@ public class Produtos extends AppCompatActivity {
             @Override
             public void onFailure(@NonNull Exception e) {
                 Log.d("db_error", "Ocorreu um problema na busca de dados" + e.toString());
+            }
+        });
+    }
+
+    private void BuscarDadosPesquisar() {
+        db.collection("Produtos").document(editPesquisarProdutos.getText().toString()).addSnapshotListener(new EventListener<DocumentSnapshot>() {
+            @Override
+            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                if (value != null) {
+                    Log.d("db_teste", value.getString("nome").toString());
+                }
             }
         });
     }

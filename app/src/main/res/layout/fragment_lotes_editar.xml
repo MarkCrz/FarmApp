@@ -35,7 +35,7 @@
             android:inputType="numberDecimal" />
 
         <EditText
-            android:id="@+id/editECorrecao"
+            android:id="@+id/editLECorrecao"
             style="@style/EditText"
             android:hint="Fator de correção"
             android:inputType="numberDecimal" />

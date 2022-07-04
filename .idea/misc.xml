@@ -34,8 +34,15 @@
         <entry key="..\:/Users/marco/Documents/GitHub/FarmApp/app/src/main/res/layout/activity_cadastrar.xml" value="0.2869791666666667" />
         <entry key="..\:/Users/marco/Documents/GitHub/FarmApp/app/src/main/res/layout/activity_configuracoes.xml" value="0.358695652173913" />
         <entry key="..\:/Users/marco/Documents/GitHub/FarmApp/app/src/main/res/layout/activity_login.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/marco/Documents/GitHub/FarmApp/app/src/main/res/layout/activity_lotes.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/marco/Documents/GitHub/FarmApp/app/src/main/res/layout/activity_lotes_produtos.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/marco/Documents/GitHub/FarmApp/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/marco/Documents/GitHub/FarmApp/app/src/main/res/layout/activity_produtos.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/marco/Documents/GitHub/FarmApp/app/src/main/res/layout/fragment_lotes_cadastrar.xml" value="0.2869791666666667" />
+        <entry key="..\:/Users/marco/Documents/GitHub/FarmApp/app/src/main/res/layout/fragment_lotes_editar.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/marco/Documents/GitHub/FarmApp/app/src/main/res/layout/fragment_manipulacao_conclusao.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/marco/Documents/GitHub/FarmApp/app/src/main/res/layout/fragment_manipulacao_inicio.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/marco/Documents/GitHub/FarmApp/app/src/main/res/layout/fragment_manipulacao_segunda_pag.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/marco/Documents/GitHub/FarmApp/app/src/main/res/layout/fragment_produtos_cadastrar.xml" value="0.358695652173913" />
         <entry key="..\:/Users/marco/Documents/GitHub/FarmApp/app/src/main/res/layout/fragment_produtos_editar.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/marco/Documents/GitHub/FarmApp/app/src/main/res/menu/main_menu.xml" value="0.36666666666666664" />

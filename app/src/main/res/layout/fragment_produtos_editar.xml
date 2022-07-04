@@ -13,6 +13,7 @@
         <EditText
             android:id="@+id/editPENome"
             style="@style/EditText"
+            android:enabled="false"
             android:hint="Nome do produto"
             android:inputType="text" />
 
@@ -31,6 +32,7 @@
         <EditText
             android:id="@+id/editPEValorFinal"
             style="@style/EditText"
+            android:enabled="false"
             android:hint="Valor final"
             android:inputType="numberDecimal" />
 

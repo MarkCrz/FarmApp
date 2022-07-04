@@ -15,16 +15,17 @@
             style="@style/TextViewFragmente"
             android:text="Lotes de {Produto}"/>
 
-        <TextView
-            android:id="@+id/txtLotesC"
-            android:layout_marginTop="30dp"
-            style="@style/TextViewFragmente"
-            android:text="Lote {Nome do lote}"/>
+        <EditText
+            android:id="@+id/editLCNome"
+            style="@style/EditText"
+            android:layout_marginTop="50dp"
+            android:hint="Nome do Lote"
+            android:inputType="textUri" />
 
         <EditText
             android:id="@+id/editLCQuant"
             style="@style/EditText"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="10dp"
             android:hint="Quantidade (g)"
             android:inputType="numberDecimal" />
 
@@ -35,7 +36,7 @@
             android:inputType="numberDecimal" />
 
         <EditText
-            android:id="@+id/editLCorrecao"
+            android:id="@+id/editLCCorrecao"
             style="@style/EditText"
             android:hint="Fator de correção"
             android:inputType="numberDecimal" />

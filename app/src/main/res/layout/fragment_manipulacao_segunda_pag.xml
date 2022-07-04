@@ -8,7 +8,7 @@
     <LinearLayout
         style="@style/LinearLayout"
         android:orientation="vertical"
-        android:paddingTop="80dp">
+        android:paddingTop="20dp">
 
         <TextView
             android:id="@+id/txtManipulacaoSegPag"
@@ -22,6 +22,41 @@
             android:hint="Quantidade de cápsula"
             android:inputType="numberDecimal" />
 
+        <Spinner
+            android:id="@+id/spinnerMSegPag"
+            style="@style/EditText"
+            android:layout_marginTop="15dp"
+            android:hint="Nome do cliente"/>
+
+        <EditText
+            android:id="@+id/editMSegPagQtdProduto"
+            style="@style/EditText"
+            android:layout_marginTop="10dp"
+            android:hint="Quantidade do produto"
+            android:inputType="numberDecimal" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnMSegPagAdicionar"
+            style="@style/Button"
+            android:text="Adicionar"
+            android:textColor="@color/white" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtManipulacaoSegPagItens"-->
+<!--            style="@style/TextViewFragmente"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:text="Itens"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/txtManipulacaoSegPagItem"-->
+<!--            style="@style/TextViewMenor"-->
+<!--            android:layout_marginTop="0dp"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:text=""/>-->
+
         <ListView
             android:id="@+id/listViewManipulacaoSegPag"
             style="@style/TabelaFragment"
@@ -33,14 +68,14 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:text="Volume por cáp. 1.67ml"/>
+            android:text="Volume por cáp. "/>
 
-        <EditText
-            android:id="@+id/editMSegPagExcipiente"
-            style="@style/EditText"
-            android:layout_marginTop="20dp"
-            android:hint="Excipiente"
-            android:inputType="textUri" />
+<!--        <EditText-->
+<!--            android:id="@+id/editMSegPagExcipiente"-->
+<!--            style="@style/EditText"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:hint="Excipiente"-->
+<!--            android:inputType="textUri" />-->
 
         <LinearLayout
             android:id="@+id/llbuttonsManipulacaoSegPag"

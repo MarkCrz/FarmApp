@@ -23,11 +23,11 @@
             android:hint="Nome do cliente"
             android:inputType="textCapWords" />
 
-        <EditText
-            android:id="@+id/editMITamCapsula"
+        <Spinner
+            android:id="@+id/editMITamanhoCap"
             style="@style/EditText"
-            android:hint="Tamanho da cápsula"
-            android:inputType="numberDecimal" />
+            android:layout_marginTop="15dp"
+            android:hint="Nome do cliente"/>
 
 
         <LinearLayout
@@ -35,7 +35,7 @@
             style="@style/LinearLayoutButtons"
             android:layout_alignParentBottom="true"
             android:orientation="horizontal"
-            android:layout_marginTop="315dp">
+            android:layout_marginTop="280dp">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnVoltarManipulacaoInicio"
