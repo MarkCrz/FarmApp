@@ -21,15 +21,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/editPesquisarManipulacao"
-            style="@style/EditText"
-            android:drawableRight="@drawable/ic_search"
-            android:hint="Pesquisar"
-            android:inputType="textUri"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtManipulacao" />
+<!--        <EditText-->
+<!--            android:id="@+id/editPesquisarManipulacao"-->
+<!--            style="@style/EditText"-->
+<!--            android:drawableRight="@drawable/ic_search"-->
+<!--            android:hint="Pesquisar"-->
+<!--            android:inputType="textUri"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txtManipulacao" />-->
 
         <ListView
             android:id="@+id/listViewManipulacao"
@@ -38,7 +38,7 @@
             android:layout_marginTop="170dp"
             android:layout_marginBottom="85dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editPesquisarManipulacao"
+            app:layout_constraintTop_toBottomOf="@+id/txtManipulacao"
             app:layout_constraintBottom_toTopOf="@id/llbuttonsManipulacao" />
 
         <FrameLayout

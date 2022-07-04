@@ -43,15 +43,15 @@
 
 
 
-        <EditText
-            android:id="@+id/editPesquisarLotesProdutos"
-            style="@style/EditText"
-            android:drawableRight="@drawable/ic_search"
-            android:hint="Pesquisar"
-            android:inputType="textUri"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/llText" />
+<!--        <EditText-->
+<!--            android:id="@+id/editPesquisarLotesProdutos"-->
+<!--            style="@style/EditText"-->
+<!--            android:drawableRight="@drawable/ic_search"-->
+<!--            android:hint="Pesquisar"-->
+<!--            android:inputType="textUri"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/llText" />-->
 
         <ListView
             android:id="@+id/listViewProdutosLotes"
@@ -60,7 +60,7 @@
             android:layout_marginBottom="85dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editPesquisarLotesProdutos"
+            app:layout_constraintTop_toBottomOf="@+id/llText"
             app:layout_constraintBottom_toTopOf="@id/llbuttonsLotesProdutos" />
 
         <FrameLayout

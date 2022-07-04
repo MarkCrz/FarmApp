@@ -21,15 +21,15 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/editPesquisarProdutosLotes"
-            style="@style/EditText"
-            android:drawableRight="@drawable/ic_search"
-            android:hint="Pesquisar"
-            android:inputType="textUri"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtLotes" />
+<!--        <EditText-->
+<!--            android:id="@+id/editPesquisarProdutosLotes"-->
+<!--            style="@style/EditText"-->
+<!--            android:drawableRight="@drawable/ic_search"-->
+<!--            android:hint="Pesquisar"-->
+<!--            android:inputType="textUri"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/txtLotes" />-->
 
         <ListView
             android:id="@+id/listViewProdutosLotes"
@@ -38,7 +38,7 @@
             android:layout_marginBottom="85dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editPesquisarProdutosLotes"
+            app:layout_constraintTop_toBottomOf="@+id/txtLotes"
             app:layout_constraintBottom_toTopOf="@id/btnVoltarLotes" />
 
         <androidx.appcompat.widget.AppCompatButton

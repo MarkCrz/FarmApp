@@ -41,7 +41,6 @@ public class Produtos extends AppCompatActivity {
     private AppCompatButton button_produtosCadastrar;
     private AppCompatButton button_produtosVoltar;
     private ListView lvProdutos;
-    private EditText editPesquisarProdutos;
 
     public String nomeProduto;
 
@@ -87,14 +86,6 @@ public class Produtos extends AppCompatActivity {
             }
         });
 
-        editPesquisarProdutos.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean hasFocus) {
-                if (!hasFocus) {
-                    //BuscarDadosPesquisar();
-                }
-            }
-        });
     }
 
     @Override
@@ -162,22 +153,11 @@ public class Produtos extends AppCompatActivity {
         });
     }
 
-    private void BuscarDadosPesquisar() {
-        db.collection("Produtos").document(editPesquisarProdutos.getText().toString()).addSnapshotListener(new EventListener<DocumentSnapshot>() {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                if (value != null) {
-                    Log.d("db_teste", value.getString("nome").toString());
-                }
-            }
-        });
-    }
 
 
     private void IniciarComponentes(){
         button_produtosCadastrar = findViewById(R.id.btnCadastrarProdutos);
         button_produtosVoltar = findViewById(R.id.btnVoltarProdutos);
         lvProdutos = findViewById(R.id.listViewProdutos);
-        editPesquisarProdutos = findViewById(R.id.editPesquisarProdutos);
     }
 }
