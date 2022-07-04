@@ -320,14 +320,18 @@ public class ManipulacaoSegundaPagFragment extends Fragment {
                         valor = valor + calcPadrao;
                         txtVolume.setText("Volume por cáp. " + valor + "ml");
                         ClassListLotesProdutos lote = new ClassListLotesProdutos(spinner.getSelectedItem().toString(), quantProduto.toString());
+
+
+
+                        listaItensNome.add(spinner.getSelectedItem().toString());
+                        listaItensGramas.add(calculo.toString());
+                        listaItens.add(lote);
+
                         listaProdutos.remove(spinner.getSelectedItem().toString());
 
                         ArrayAdapter<String> adapter = new ArrayAdapter<>(view.getContext(), simple_spinner_dropdown_item, listaProdutos);
 
                         spinner.setAdapter(adapter);
-                        listaItensNome.add(spinner.getSelectedItem().toString());
-                        listaItensGramas.add(calculo.toString());
-                        listaItens.add(lote);
 
                         ArrayAdapter<ClassListLotesProdutos> adapter2 = new ArrayAdapter<>(
                                 view.getContext(), simple_list_item_1, listaItens

@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,8 +17,15 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.farmapp.Dados.ManipulacaoClasse;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 public class ManipulacaoActivity extends AppCompatActivity {
 
@@ -25,7 +33,10 @@ public class ManipulacaoActivity extends AppCompatActivity {
     private AppCompatButton button_cadastrar;
     private ManipulacaoInicioFragment manipulacaoInicioFragment = new ManipulacaoInicioFragment();
     private ListView lvManipulacao;
-    ArrayList<ManipulacaoClasse> lista;
+
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+    ArrayList<String> listaManipulacao = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,37 +44,14 @@ public class ManipulacaoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_manipulacao);
         IniciarComponentes();
 
-        lista = new ArrayList<>();
 
-        ManipulacaoClasse m1 = new ManipulacaoClasse("Neuza");
-        ManipulacaoClasse m2 = new ManipulacaoClasse("Zureide");
-        ManipulacaoClasse m3 = new ManipulacaoClasse("Adileide");
-        ManipulacaoClasse m4 = new ManipulacaoClasse("Madalena");
-        ManipulacaoClasse m5 = new ManipulacaoClasse("Veronica");
-        ManipulacaoClasse m6 = new ManipulacaoClasse("Cíntia");
-        ManipulacaoClasse m7 = new ManipulacaoClasse("Cléia");
-
-        lista.add(m1);
-        lista.add(m2);
-        lista.add(m3);
-        lista.add(m4);
-        lista.add(m5);
-        lista.add(m6);
-        lista.add(m7);
-
-        ArrayAdapter<ManipulacaoClasse> adapter = new ArrayAdapter<>(
-                this, android.R.layout.simple_list_item_1, lista
-        );
-
-        lvManipulacao.setAdapter(adapter);
-
-        lvManipulacao.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-                ft.replace(R.id.manipulacaoFrameLayout, manipulacaoInicioFragment).commit();
-            }
-        });
+//        lvManipulacao.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+//                ft.replace(R.id.manipulacaoFrameLayout, manipulacaoInicioFragment).commit();
+//            }
+//        });
 
         button_voltar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,9 +94,40 @@ public class ManipulacaoActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        BuscarTabelaDados();
+    }
+
     private void trocarTela(Activity activity, Class classe) {
         Intent intent = new Intent(activity, classe);
         startActivity(intent);
+    }
+
+    private void BuscarTabelaDados () {
+        db.collection("Manipulacoes").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                if (!queryDocumentSnapshots.isEmpty()) {
+                    List<DocumentSnapshot> list = queryDocumentSnapshots.getDocuments();
+                    for (DocumentSnapshot d : list) {
+                        listaManipulacao.add(d.get("nomeCliente").toString().toUpperCase(Locale.ROOT));
+                    }
+
+                    ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                            ManipulacaoActivity.this, android.R.layout.simple_list_item_1, listaManipulacao
+                    );
+
+                    lvManipulacao.setAdapter(adapter);
+                }
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Log.d("db_error", "Ocorreu um problema na busca de dados" + e.toString());
+            }
+        });
     }
 
     private void IniciarComponentes(){

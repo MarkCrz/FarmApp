@@ -70,7 +70,7 @@
             android:textAlignment="textEnd"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:text="Valor: R$: 32.50"/>
+            android:text="Valor: R$: "/>
 
         <LinearLayout
             android:id="@+id/llbuttonsManipulacaoConclusao"
